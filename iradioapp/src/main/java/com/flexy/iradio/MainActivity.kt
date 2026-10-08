@@ -196,7 +196,8 @@ class MainActivity : AppCompatActivity() {
     private fun launchDocumentsUiAudioPicker() {
         val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
             addCategory(Intent.CATEGORY_OPENABLE)
-            type = "audio/*"
+            type = "*/*"
+            putExtra(Intent.EXTRA_MIME_TYPES, arrayOf("audio/*", "video/mp4", "video/*"))
             setPackage("com.android.car.documentsui")
             putExtra(Intent.EXTRA_LOCAL_ONLY, true)
             addFlags(
