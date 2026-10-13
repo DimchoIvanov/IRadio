@@ -186,11 +186,6 @@ class MainActivity : AppCompatActivity() {
         binding.btnPickFile.setOnClickListener {
             launchDocumentsUiAudioPicker()
         }
-
-        binding.btnPickFile2.setOnClickListener {
-            Log.d("IRadioPicker", "btnPickFile2 clicked")
-            launchDocumentsUiAudioPicker()
-        }
     }
 
     private fun launchDocumentsUiAudioPicker() {
